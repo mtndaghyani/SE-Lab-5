@@ -5,9 +5,13 @@ public class Calculator {
         return first + second;
     }
 
-    //todo: create multiple method
-
-    //todo: create divide method
-
-    //todo: create power method
+    public int multiple(int first, int second) {
+        return first * second;
+    }
+    public int divide(int first, int second) {
+        return first / second;
+    }
+    public int power(int first, int second) {
+        return first ^ second;
+    }
 }
