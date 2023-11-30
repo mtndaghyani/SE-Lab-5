@@ -18,19 +18,19 @@ Feature: Calculator
       | 2     | 2      | 4	    |
 
   Scenario: multiple two numbers
-    Given Input values, 6 and 2
+    Given Input values, 3 and 2
     When I multiple the values
-    Then I expect the result 12
+    Then I expect the result 6
 
   Scenario: divide two numbers
-    Given Input values, 6 and 2
+    Given Input values, 16 and 4
     When I divide the values
-    Then I expect the result 3
+    Then I expect the result 4
 
   Scenario: power two numbers
-    Given Input values, 6 and 2
+    Given Input values, 2 and 3
     When I power the values
-    Then I expect the result 12
+    Then I expect the result 8
 
   Scenario Outline: opt two numbers
     Given Input values, <first> and <second> and <opt>
@@ -40,4 +40,4 @@ Feature: Calculator
       | first | second | opt | result |
       | 6 | 2 | * | 12 |
       | 6 | 2 | / | 3 |
-      | 6 | 2 | ^ | 12 |
+      | 6 | 2 | ^ | 36 |

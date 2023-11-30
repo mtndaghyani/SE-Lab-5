@@ -46,16 +46,13 @@ public class MyStepDefs {
         this.secondValue = second;
         switch (operator) {
             case "*" -> {
-                calculator.multiple(first , second);
-                this.calculatorResult = calculatorResult;
+                this.calculatorResult = calculator.multiple(first, second);
             }
             case "/" -> {
-                calculator.divide(first , second ) ;
-                this.calculatorResult = calculatorResult;
+                this.calculatorResult = calculator.divide(first, second);
             }
             case "^" -> {
-                calculator.power(first , second) ;
-                this.calculatorResult = calculatorResult;
+                this.calculatorResult = calculator.power(first, second);
             }
             default -> {
                 throw new RuntimeException("Unsupported Operator");
@@ -66,22 +63,19 @@ public class MyStepDefs {
 
     @When("I multiple the values")
     public void iMultipleTheResult() {
-        calculator.multiple(firstValue , secondValue) ;
-        this.calculatorResult = calculatorResult ;
+        this.calculatorResult = calculator.multiple(firstValue, secondValue);
         System.out.println(this.calculatorResult);
     }
 
     @When("I divide the values")
     public void iDivideTheResult() {
-        calculator.divide(firstValue , secondValue) ;
-        this.calculatorResult = calculatorResult ;
+        this.calculatorResult = calculator.divide(firstValue, secondValue);
         System.out.println(this.calculatorResult);
     }
 
     @When("I power the values")
     public void iPowerTheResult() {
-        calculator.power(firstValue , secondValue) ;
-        this.calculatorResult = calculatorResult ;
+        this.calculatorResult = calculator.power(firstValue, secondValue);
         System.out.println(this.calculatorResult);
     }
 
